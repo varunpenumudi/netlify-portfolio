@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+/* root (i.e. html) element properties */
+:root {
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    --text-primary: #b6b6b6;
+    --bg-primary: #24252A;
+
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+}
