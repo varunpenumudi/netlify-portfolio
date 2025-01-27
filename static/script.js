@@ -1,48 +1,69 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Add the Ceritificates
+  // Mobile Menu Toggle
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+  });
 
-    certificates.forEach(cert => {
-      html = `
-      <div class="min-w-72 m-3 rounded-lg shadow-lg dark:bg-gray-800 dark:text-white">
-          <img class="w-full px-6 pt-6 h-[50%]" src="${cert.image}" alt="${cert.name}" />
-          <div class="px-6 py-4">
-            <div class="mb-2 text-base font-bold">${cert.name}</div>
-            <p class="text-sm"> ${cert.description}</p>
+  // Close mobile menu when clicking a link
+  const mobileLinks = mobileMenu.querySelectorAll('a');
+  mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+          mobileMenu.classList.add('hidden');
+      });
+  });
+
+  // Add the Certificates
+  certificates.forEach(cert => {
+      const html = `
+          <div class="flex-none w-64 sm:w-72 rounded-lg overflow-hidden border border-gray-800 bg-gray-800/50 backdrop-blur-sm transition-transform hover:scale-105">
+              <img class="w-full h-40 sm:h-48 object-cover p-4" src="${cert.image}" alt="${cert.name}" />
+              <div class="p-4">
+                  <h3 class="text-base sm:text-lg font-bold text-white mb-2">${cert.name}</h3>
+                  <p class="text-xs sm:text-sm text-gray-300 mb-4">${cert.description}</p>
+                  <a href="${cert.link}" 
+                     class="inline-block px-4 py-2 rounded-full bg-sky-500/10 text-sky-400 text-xs sm:text-sm font-semibold hover:bg-sky-500/20 transition-colors"
+                     target="_blank" rel="noopener noreferrer">
+                      View Certificate
+                  </a>
+              </div>
           </div>
-          <div class="px-6 pb-2 text-sm">
-            <a href="${cert.link}" class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-2 py-1 text-sm font-semibold text-gray-700">View Certificate</a>
-          </div>
-      </div>
       `;
       document.querySelector("#certs-container").innerHTML += html;
-    });
+  });
 
-    // Add the Projects
-    console.log(projects);
-
-    
-    projects.forEach(proj => {
-      demo = '';
-
-      if (proj.demo_link != '') {
-        demo = `<a href="${proj.demo_link}" class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-2 py-1 text-sm font-semibold text-gray-700">Demo</a>`;
+  // Add the Projects
+  projects.forEach(proj => {
+      let demo = '';
+      if (proj.demo_link) {
+          demo = `
+              <a href="${proj.demo_link}" 
+                 class="inline-block px-4 py-2 rounded-full bg-sky-500/10 text-sky-400 text-xs sm:text-sm font-semibold hover:bg-sky-500/20 transition-colors"
+                 target="_blank" rel="noopener noreferrer">
+                  Demo
+              </a>
+          `;
       }
 
-      html = `
-        <div class="min-w-72 m-3 rounded-lg shadow-lg dark:bg-gray-800 dark:text-white">
-            <img class="w-full px-6 pt-6 h-[50%]" src="${proj.image}" alt="${proj.name}" />
-            <div class="px-6 py-4">
-              <div class="mb-2 text-base font-bold">${proj.name}</div>
-              <p class="text-sm"> ${proj.description}</p>
-            </div>
-            <div class="px-6 pb-2 text-sm">
-              <a href="${proj.source_link}" class="mb-2 mr-2 inline-block rounded-full bg-gray-200 px-2 py-1 text-sm font-semibold text-gray-700">Source</a>
-              ${demo}
+      const html = `
+          <div class="flex-none w-64 sm:w-72 rounded-lg overflow-hidden border border-gray-800 bg-gray-800/50 backdrop-blur-sm transition-transform hover:scale-105">
+              <img class="w-full h-40 sm:h-48 object-cover p-4" src="${proj.image}" alt="${proj.name}" />
+              <div class="p-4">
+                  <h3 class="text-base sm:text-lg font-bold text-white mb-2">${proj.name}</h3>
+                  <p class="text-xs sm:text-sm text-gray-300 mb-4">${proj.description}</p>
+                  <div class="space-x-2">
+                      <a href="${proj.source_link}" 
+                         class="inline-block px-4 py-2 rounded-full bg-sky-500/10 text-sky-400 text-xs sm:text-sm font-semibold hover:bg-sky-500/20 transition-colors"
+                         target="_blank" rel="noopener noreferrer">
+                          Source
+                      </a>
+                      ${demo}
+                  </div>
               </div>
-        </div>
+          </div>
       `;
-
       document.querySelector("#projects-container").innerHTML += html;
-    })
-
-})
+  });
+});

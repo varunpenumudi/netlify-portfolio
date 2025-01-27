@@ -1,8 +1,9 @@
 <!DOCTYPE html>
+<html class="scroll-smooth">
     <head>
         <meta charset="utf-8">
-        <title> Varun Penumudi </title>
-        <meta name="description" content="">
+        <title>Varun Penumudi</title>
+        <meta name="description" content="Personal portfolio website of Varun Penumudi">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <script src="static/certificates.js"></script>
@@ -13,168 +14,229 @@
         <link rel="stylesheet" href="styles.css">
     </head>
 
-    <body>
+    <body class="bg-gray-900 text-gray-100">
         <!-- NAVBAR TOP -->
-        <header>
-            <nav class="flex justify-between items-center px-11 py-5">
-                <h5 class="cursor-pointer font-bold text-2xl"> <a href=""> Varun Penumudi </a></h5>
-                <div class="flex space-x-16 max-md:flex-col">
-                    <div class="ml-16"><a href="#hero" class="group transition duration-300">
+        <header class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+            <nav class="flex justify-between items-center px-4 sm:px-6 md:px-11 py-4 max-w-7xl mx-auto">
+                <h5 class="cursor-pointer font-bold text-xl sm:text-2xl text-white"> 
+                    <a href=""> Varun Penumudi </a>
+                </h5>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="#hero" class="group transition-colors duration-300 hover:text-sky-400">
                         Home
-                        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
-                    </a></div>
-                    <div><a href="#about-me" class="group">
+                        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-400"></span>
+                    </a>
+                    <a href="#about-me" class="group transition-colors duration-300 hover:text-sky-400">
                         About Me
-                        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
-                    </a></div>
-                    <div><a href="#skills" class="group">
+                        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-400"></span>
+                    </a>
+                    <a href="#skills" class="group transition-colors duration-300 hover:text-sky-400">
                         Skills & Certs
-                        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
-                    </a></div>
-                    <div><a href="#projects" class="group">
+                        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-400"></span>
+                    </a>
+                    <a href="#projects" class="group transition-colors duration-300 hover:text-sky-400">
                         Projects
-                        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
-                    </a></div>
-                    <!-- <div><a href="#" class="group">Achievements</a></div> -->
-                    <div><a href="#contact" class="group">
+                        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-400"></span>
+                    </a>
+                    <a href="#contact" class="group transition-colors duration-300 hover:text-sky-400">
                         Contact
-                        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
-                    </a></div>
+                        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-400"></span>
+                    </a>
                 </div>
             </nav>
-        </header>
 
-
-        <!-- Hero Section -->
-        <div id="hero" class="px-24 mx-40 my-10  h-[65vh] flex justify-between items-center border rounded-md space-y-reverse space-y-10
-            max-md:flex-col-reverse max-md:mx-2 max-md:px-4 max-md:py-10"
-        >
-            <div class="items-center h-96 space-y-4 max-sm:h-auto"> 
-                <h1 class="text-6xl mb-1 leading-tight max-sm:text-3xl"> This is <br class="max-sm:hidden"> Varun Penumudi </h1>
-                <div class="px-1 text-xl max-sm:text-base"> I am intrested in Python, Django and Machine Learning</div>
-
-                <div class="cta py-3 flex space-x-4">
-                    <a href="#contact"> <button class="border-2 rounded-md p-2 hover:bg-white hover:text-black"> Contact</button> </a>
-                    <a href="#projects"> <button class="border-2 rounded-md p-2 hover:bg-white hover:text-black"> Projects</button> </a>
-                </div>
-                <div class="flex space-x-6 items-center">
-                    <a href="https://github.com/varunpenumudi"><img src="assets/appicons/github.png" alt="github-logo" class="h-8"></a>
-                    <a href="https://linkedin.com/in/varunpenumudi"><img src="assets/appicons/linkedin.png" alt="linkedin-logo" class="h-8"></a>
-                    <a href="https://dev.to/varunpenumudi"><img src="assets/appicons/devto.png" alt="devto-logo" class="h-8"></a>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden px-4 py-2 bg-gray-900/95 border-b border-gray-800">
+                <div class="flex flex-col space-y-3 pb-3">
+                    <a href="#hero" class="text-gray-300 hover:text-sky-400 transition-colors">Home</a>
+                    <a href="#about-me" class="text-gray-300 hover:text-sky-400 transition-colors">About Me</a>
+                    <a href="#skills" class="text-gray-300 hover:text-sky-400 transition-colors">Skills & Certs</a>
+                    <a href="#projects" class="text-gray-300 hover:text-sky-400 transition-colors">Projects</a>
+                    <a href="#contact" class="text-gray-300 hover:text-sky-400 transition-colors">Contact</a>
                 </div>
             </div>
-            <div class="flex justify-center items-center pl-5 w-96">
-                <div class="profile-pic rounded-full">
-                    <img src="assets/profile-pic.jpg" alt="profile-pic" class="rounded-full h-[50vh] max-sm:h-[20vh]">
+        </header>
+
+        <!-- Hero Section -->
+        <div id="hero" class="px-4 sm:px-6 md:px-24 max-w-7xl mx-auto my-6 sm:my-10 min-h-[calc(100vh-6rem)] flex justify-between items-center border border-gray-800 rounded-lg bg-gray-900/50 backdrop-blur-sm
+            md:space-y-reverse md:space-y-10 max-md:flex-col-reverse max-md:py-8">
+            <div class="space-y-4 sm:space-y-6 max-w-xl px-4 sm:px-0"> 
+                <h1 class="text-3xl sm:text-4xl md:text-6xl font-bold text-white leading-tight"> 
+                    This is <br class="max-sm:hidden"> Varun Penumudi 
+                </h1>
+                <div class="text-base sm:text-lg md:text-xl text-gray-300"> 
+                    I am interested in Python, Django and Machine Learning
+                </div>
+
+                <div class="flex space-x-4">
+                    <a href="#contact"> 
+                        <button class="px-4 sm:px-6 py-2 text-sm sm:text-base border-2 border-sky-400 text-sky-400 rounded-md transition-colors hover:bg-sky-400 hover:text-white">
+                            Contact
+                        </button> 
+                    </a>
+                    <a href="#projects"> 
+                        <button class="px-4 sm:px-6 py-2 text-sm sm:text-base border-2 border-gray-300 rounded-md transition-colors hover:bg-white hover:text-gray-900">
+                            Projects
+                        </button> 
+                    </a>
+                </div>
+                <div class="flex space-x-6 items-center">
+                    <a href="https://github.com/varunpenumudi" class="transition-transform hover:scale-110">
+                        <img src="assets/appicons/github.png" alt="github-logo" class="h-6 sm:h-8">
+                    </a>
+                    <a href="https://linkedin.com/in/varunpenumudi" class="transition-transform hover:scale-110">
+                        <img src="assets/appicons/linkedin.png" alt="linkedin-logo" class="h-6 sm:h-8">
+                    </a>
+                    <a href="https://dev.to/varunpenumudi" class="transition-transform hover:scale-110">
+                        <img src="assets/appicons/devto.png" alt="devto-logo" class="h-6 sm:h-8">
+                    </a>
+                </div>
+            </div>
+            <div class="flex justify-center items-center w-full sm:w-96 mb-6 sm:mb-0">
+                <div class="rounded-full ring-4 ring-sky-400/50 p-2">
+                    <img src="assets/profile-pic.jpg" alt="profile-pic" class="rounded-full w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 object-cover">
                 </div>
             </div>
         </div>
 
-
         <!-- About Section -->
-        <div id="about-me" class="flex-col mx-40 my-20 max-sm:mx-2">
-            <div class="text-4xl text-center cursor-pointer hover:underline underline-offset-8">
+        <div id="about-me" class="px-4 sm:px-6 md:px-24 max-w-7xl mx-auto my-16 sm:my-20">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-8 sm:mb-10 hover:text-sky-400 transition-colors">
                 About me
-                <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-600"></span>
-            </div>
-            <div class="px-14 py-10 my-8 border rounded-md ">
-                <p class="text-lg leading-8 max-sm:text-base">
-                    👋 Hi! I’m Varun, a final-year bachelor’s student in Electronics and Communication Engineering with a passion for programming and electronics. 
-                    I enjoy working with Python,Django and Machine Learning.
+            </h2>
+            <div class="p-6 sm:p-8 border border-gray-800 rounded-lg bg-gray-900/50 backdrop-blur-sm">
+                <p class="text-base sm:text-lg leading-relaxed text-gray-300">
+                    👋 Hi! I'm Varun, a final-year bachelor's student in Electronics and Communication Engineering with a passion for programming and electronics. 
+                    I enjoy working with Python, Django and Machine Learning.
                     I have acquired CS50 Certifications on Python, Web development with Django and JavaScript and kaggle Certifications on Machine Learning.
                     I have also done Projects on Django and ML using Python, JavaScript and HTML. I like to work and collab with anyone working on projects related to these.
                 </p>
             </div>
         </div>
 
-
-        <!-- Skils&Certs Section -->
-        <div id="skills" class="flex-col mx-44 my-20 max-sm:mx-2">
+        <!-- Skills&Certs Section -->
+        <div id="skills" class="px-4 sm:px-6 md:px-24 max-w-7xl mx-auto my-16 sm:my-20">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-8 sm:mb-10 hover:text-sky-400 transition-colors">
+                Skills & Certifications
+            </h2>
+            
             <!-- Skills -->
-            <div class="text-4xl text-center cursor-pointer hover:underline underline-offset-8"> Skills & Certifications </div>
-            <div class="px-14 my-8 space-y-2 border rounded-md py-10">
-                <h1 class="text-3xl hover:underline underline-offset-8 mb-3"> Skills </h1>
-                <div>
-                    <span class="text-xl cursor-pointer w-48 inline-block max-sm:block"> Languages:   </span> 
-                    <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="python" class="inline-block px-1 py-2"> 
-                    <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" class="inline-block px-1 py-2"> 
-                    <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" class="inline-block px-1 py-2"> 
-                    <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" class="inline-block px-1 py-2"> 
-                    <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" class="inline-block px-1"> 
-                    <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="Postgres" class="inline-block px-1 py-2"> 
-                </div>
-                <div>
-                    <span class="text-xl cursor-pointer w-48 inline-block max-sm:block"> Web Frameworks:   </span> 
-                    <img src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white" alt="Django" class="inline-block px-1 py-2"> 
-                    <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" class="inline-block px-1 py-2"> 
-                    <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI" class="inline-block px-1 py-2"> 
-                </div>
-                <div>
-                    <span class="text-xl cursor-pointer w-48 inline-block max-sm:block"> AI & ML:   </span> 
-                    <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas" class="inline-block px-1 py-2"> 
-                    <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Sklearn" class="inline-block px-1 py-2"> 
-                    <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt="Pytorch" class="inline-block px-1 py-2"> 
-                    <img src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white" alt="TensorFlow" class="inline-block px-1 py-2">
-                </div>
-                <div>
-                    <span class="text-xl cursor-pointer w-48 inline-block max-sm:block"> Other:   </span> 
-                    <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git" class="inline-block px-1 py-2"> 
-                    <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="Github" class="inline-block px-1 py-2"> 
-                    <img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white" alt="Arduino" class="inline-block px-1 py-2"> 
-                    <img src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white" alt="Canva" class="inline-block px-1 py-2">
+            <div class="p-6 sm:p-8 border border-gray-800 rounded-lg bg-gray-900/50 backdrop-blur-sm mb-8 sm:mb-10">
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-6">Skills</h3>
+                <div class="space-y-6">
+                    <div class="flex flex-wrap gap-4">
+                        <span class="text-lg sm:text-xl text-gray-300 w-full sm:w-48 mb-2 sm:mb-0">Languages:</span> 
+                        <div class="flex flex-wrap gap-2">
+                            <img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54" alt="python"> 
+                            <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5"> 
+                            <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3"> 
+                            <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript"> 
+                            <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java"> 
+                            <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="Postgres">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="text-lg sm:text-xl text-gray-300 w-full sm:w-48 mb-2 sm:mb-0">Web Frameworks:</span>
+                        <div class="flex flex-wrap gap-2">
+                            <img src="https://img.shields.io/badge/django-%23092E20.svg?style=for-the-badge&logo=django&logoColor=white" alt="Django"> 
+                            <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React"> 
+                            <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="text-lg sm:text-xl text-gray-300 w-full sm:w-48 mb-2 sm:mb-0">AI & ML:</span>
+                        <div class="flex flex-wrap gap-2">
+                            <img src="https://img.shields.io/badge/pandas-%23150458.svg?style=for-the-badge&logo=pandas&logoColor=white" alt="Pandas"> 
+                            <img src="https://img.shields.io/badge/scikit--learn-%23F7931E.svg?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Sklearn"> 
+                            <img src="https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white" alt="Pytorch"> 
+                            <img src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white" alt="TensorFlow">
+                        </div>
+                    </div>
+                    <div class="flex flex-wrap gap-4">
+                        <span class="text-lg sm:text-xl text-gray-300 w-full sm:w-48 mb-2 sm:mb-0">Other:</span>
+                        <div class="flex flex-wrap gap-2">
+                            <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git"> 
+                            <img src="https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white" alt="Github"> 
+                            <img src="https://img.shields.io/badge/-Arduino-00979D?style=for-the-badge&logo=Arduino&logoColor=white" alt="Arduino"> 
+                            <img src="https://img.shields.io/badge/Canva-%2300C4CC.svg?style=for-the-badge&logo=Canva&logoColor=white" alt="Canva">
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Certificates -->
-            <div id="certifications" class="px-14 py-10 my-8 space-y-2 w-full will-change-scroll border rounded-md">
-                <h1 class="text-3xl hover:underline underline-offset-8 mb-3"> Certifications </h1>
-                <div id="certs-container" class="flex flex-row overflow-x-scroll 
-                    [&::-webkit-scrollbar]:w-2
+            <div class="p-6 sm:p-8 border border-gray-800 rounded-lg bg-gray-900/50 backdrop-blur-sm">
+                <h3 class="text-xl sm:text-2xl font-bold text-white mb-6">Certifications</h3>
+                <div id="certs-container" class="flex overflow-x-auto gap-4 sm:gap-6 pb-4
+                    [&::-webkit-scrollbar]:h-2
                     [&::-webkit-scrollbar-track]:rounded-full
-                    [&::-webkit-scrollbar-track]:bg-gray-100
+                    [&::-webkit-scrollbar-track]:bg-gray-800
                     [&::-webkit-scrollbar-thumb]:rounded-full
-                    dark:[&::-webkit-scrollbar-track]:bg-neutral-700
-                    dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500"
-                >
+                    [&::-webkit-scrollbar-thumb]:bg-gray-600
+                    hover:[&::-webkit-scrollbar-thumb]:bg-gray-500">
                 </div>
             </div>
         </div>
-
 
         <!-- Projects Section -->
-        <div id="projects" class="flex-col mx-40 my-20 max-sm:mx-2">
-            <div class="mb-10 text-4xl text-center cursor-pointer hover:underline underline-offset-8">Projects</div>
-            <div class="border rounded-md p-10">
-                <div id="projects-container" class="flex flex-row overflow-x-scroll p-10
-                    [&::-webkit-scrollbar]:w-2
+        <div id="projects" class="px-4 sm:px-6 md:px-24 max-w-7xl mx-auto my-16 sm:my-20">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-8 sm:mb-10 hover:text-sky-400 transition-colors">
+                Projects
+            </h2>
+            <div class="p-6 sm:p-8 border border-gray-800 rounded-lg bg-gray-900/50 backdrop-blur-sm">
+                <div id="projects-container" class="flex overflow-x-auto gap-4 sm:gap-6 pb-4
+                    [&::-webkit-scrollbar]:h-2
                     [&::-webkit-scrollbar-track]:rounded-full
-                    [&::-webkit-scrollbar-track]:bg-gray-100
+                    [&::-webkit-scrollbar-track]:bg-gray-800
                     [&::-webkit-scrollbar-thumb]:rounded-full
-                    dark:[&::-webkit-scrollbar-track]:bg-neutral-700
-                    dark:[&::-webkit-scrollbar-thumb]:bg-neutral-500"
-                >
-
+                    [&::-webkit-scrollbar-thumb]:bg-gray-600
+                    hover:[&::-webkit-scrollbar-thumb]:bg-gray-500">
                 </div>
             </div>
-            
         </div>
 
-
         <!-- Contact Section -->
-        <div id="contact" class="flex-col mx-40 my-20 max-sm:mx-2">
-            <div class="mb-10 text-4xl text-center cursor-pointer hover:underline underline-offset-8">Contact</div>
-            <div class="border rounded-md p-10 space-y-5">
-                <div class="flex"> <div class="w-20 font-bold"> Email: </div>    <a href="mailto:penumudivarun@gmail.com">penumudivarun@gmail.com</a></div>
-                <div class="flex"> <div class="w-20 font-bold"> Linkedin: </div> <a href="https://linkedin.com/in/varunpenumudi">linkedin.com/in/varunpenumudi</a></div>
-                <div class="flex"> <div class="w-20 font-bold"> Github: </div>   <a href="https://github.com/varunpenumudi">github.com/varunpenumudi</a></div>
-
-                <div class="flex space-x-4 items-center">
-                    <div class="w-16 font-bold"> Socials: </div>
-                    <a href="https://youtube.com/@varunpenumudi"><img src="https://cdn.brandfetch.io/idVfYwcuQz/w/800/h/564/theme/dark/symbol.png?c=1dxbfHSJFAPEGdCLU4o5B" alt="Youtube logo" class="h-6"></a>
-                    <a href="https://dev.to/varunpenumudi"><img src="assets/appicons/devto.png" alt="devto-logo" class="h-7"></a>
-                    <a href="https://medium.com/@penumudivarun"><img src="https://cdn.brandfetch.io/idIlQtGZ76/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B" alt="Medium logo" class="h-7"></a>
+        <div id="contact" class="px-4 sm:px-6 md:px-24 max-w-7xl mx-auto my-16 sm:my-20">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-8 sm:mb-10 hover:text-sky-400 transition-colors">
+                Contact
+            </h2>
+            <div class="p-6 sm:p-8 border border-gray-800 rounded-lg bg-gray-900/50 backdrop-blur-sm space-y-6">
+                <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-0">
+                    <span class="font-bold text-gray-300 sm:w-24">Email:</span>
+                    <a href="mailto:penumudivarun@gmail.com" class="hover:text-sky-400 transition-colors break-all">penumudivarun@gmail.com</a>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-0">
+                    <span class="font-bold text-gray-300 sm:w-24">LinkedIn:</span>
+                    <a href="https://linkedin.com/in/varunpenumudi" class="hover:text-sky-400 transition-colors break-all">linkedin.com/in/varunpenumudi</a>
+                </div>
+                <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-0">
+                    <span class="font-bold text-gray-300 sm:w-24">Github:</span>
+                    <a href="https://github.com/varunpenumudi" class="hover:text-sky-400 transition-colors break-all">github.com/varunpenumudi</a>
                 </div>
 
+                <div class="flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-6 pt-2">
+                    <span class="font-bold text-gray-300">Socials:</span>
+                    <div class="flex gap-4">
+                        <a href="https://youtube.com/@varunpenumudi" class="transition-transform hover:scale-110">
+                            <img src="https://cdn.brandfetch.io/idVfYwcuQz/w/800/h/564/theme/dark/symbol.png?c=1dxbfHSJFAPEGdCLU4o5B" alt="Youtube logo" class="h-6">
+                        </a>
+                        <a href="https://dev.to/varunpenumudi" class="transition-transform hover:scale-110">
+                            <img src="assets/appicons/devto.png" alt="devto-logo" class="h-7">
+                        </a>
+                        <a href="https://medium.com/@penumudivarun" class="transition-transform hover:scale-110">
+                            <img src="https://cdn.brandfetch.io/idIlQtGZ76/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B" alt="Medium logo" class="h-7">
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </body>
