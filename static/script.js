@@ -109,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const html = `
-            <div class="flex-none w-64 sm:w-72 rounded-lg overflow-hidden border border-gray-800 bg-gray-800/50 backdrop-blur-sm transition-transform hover:scale-105">
+            <div class="flex-none w-52 sm:w-64 rounded-lg overflow-hidden border border-gray-800 bg-gray-800/50 backdrop-blur-sm transition-transform hover:scale-105">
                 <img class="w-full h-40 sm:h-48 object-cover p-4" src="${proj.image}" alt="${proj.name}" />
                 <div class="p-4">
                     <h3 class="text-base sm:text-lg font-bold text-white mb-2">${proj.name}</h3>
