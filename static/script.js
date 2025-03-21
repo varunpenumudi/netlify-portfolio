@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
             
             // Add "View All Projects" button
             projectsContainer.innerHTML += `
-                <div class="flex-none w-64 sm:w-72 rounded-lg overflow-hidden border border-gray-800 bg-gray-800/50 backdrop-blur-sm transition-transform hover:scale-105 flex items-center justify-center">
+                <div class="flex-none w-56 sm:w-64 rounded-lg overflow-hidden border border-gray-800 bg-gray-800/50 backdrop-blur-sm transition-transform hover:scale-105 flex items-center justify-center">
                     <a href="all_projects.html" 
                        class="p-4 text-center">
                         <div class="text-6xl text-sky-400 mb-4">→</div>
