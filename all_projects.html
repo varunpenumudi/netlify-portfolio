@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="scroll-smooth">
+    <head>
+        <meta charset="utf-8">
+        <title>Projects - Varun Penumudi</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <script src="static/projects.js"></script>
+        <script src="static/script.js"></script>
+
+        <!-- Tailwind CSS Import -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body class="bg-gray-900 text-gray-100">
+        <!-- NAVBAR TOP -->
+        <header class="sticky top-0 z-50 bg-gray-900/95 backdrop-blur-sm border-b border-gray-800">
+            <nav class="flex justify-between items-center px-4 sm:px-6 md:px-11 py-4 max-w-7xl mx-auto">
+                <h5 class="cursor-pointer font-bold text-xl sm:text-2xl text-white"> 
+                    <a href=""> Varun Penumudi </a>
+                </h5>
+                
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-800">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html#hero" class="group transition-colors duration-300 hover:text-sky-400">
+                        Home
+                        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-400"></span>
+                    </a>
+                    <a href="index.html#about-me" class="group transition-colors duration-300 hover:text-sky-400">
+                        About Me
+                        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-400"></span>
+                    </a>
+                    <a href="index.html#skills" class="group transition-colors duration-300 hover:text-sky-400">
+                        Skills & Certs
+                        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-400"></span>
+                    </a>
+                    <a href="index.html#projects" class="group transition-colors duration-300 hover:text-sky-400">
+                        Projects
+                        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-400"></span>
+                    </a>
+                    <a href="index.html#contact" class="group transition-colors duration-300 hover:text-sky-400">
+                        Contact
+                        <span class="block max-w-0 group-hover:max-w-full transition-all duration-500 h-0.5 bg-sky-400"></span>
+                    </a>
+                </div>
+            </nav>
+
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden px-4 py-2 bg-gray-900/95 border-b border-gray-800">
+                <div class="flex flex-col space-y-3 pb-3">
+                    <a href="#hero" class="text-gray-300 hover:text-sky-400 transition-colors">Home</a>
+                    <a href="#about-me" class="text-gray-300 hover:text-sky-400 transition-colors">About Me</a>
+                    <a href="#skills" class="text-gray-300 hover:text-sky-400 transition-colors">Skills & Certs</a>
+                    <a href="#projects" class="text-gray-300 hover:text-sky-400 transition-colors">Projects</a>
+                    <a href="#contact" class="text-gray-300 hover:text-sky-400 transition-colors">Contact</a>
+                </div>
+            </div>
+        </header>
+
+        <!-- Projects Section -->
+        <div class="px-4 sm:px-6 md:px-24 max-w-7xl mx-auto my-16 sm:my-20">
+            <h2 class="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-white mb-8 sm:mb-10">
+                All Projects
+            </h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="all-projects-container">
+            </div>
+        </div>
+    </body>
+</html>
