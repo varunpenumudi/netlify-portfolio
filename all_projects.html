@@ -5,6 +5,7 @@
         <title>Projects - Varun Penumudi</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
         <script src="static/projects.js"></script>
         <script src="static/all_projects.js"></script>
         <script src="static/script.js"></script>
@@ -84,9 +85,42 @@
                 </div>
             </div>
 
-            <!-- Projects Grid -->
-            <div id="all-projects-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Projects Container -->
+            <div id="all-projects-container" class="space-y-6">
+                <!-- Projects will be inserted here -->
             </div>
         </div>
+
+        <style>
+            /* Markdown styles */
+            .markdown h1 {
+                font-size: 1.5rem;
+                font-weight: bold;
+                margin-top: 1rem;
+                margin-bottom: 0.5rem;
+                color: #fff;
+            }
+            .markdown h2 {
+                font-size: 1.25rem;
+                font-weight: bold;
+                margin-top: 1rem;
+                margin-bottom: 0.5rem;
+                color: #fff;
+            }
+            .markdown p {
+                margin-bottom: 0.75rem;
+            }
+            .markdown ul {
+                list-style-type: disc;
+                margin-left: 1.5rem;
+                margin-bottom: 0.75rem;
+            }
+            .markdown code {
+                background-color: rgba(31, 41, 55, 0.5);
+                padding: 0.2rem 0.4rem;
+                border-radius: 0.25rem;
+                font-family: monospace;
+            }
+        </style>
     </body>
 </html>
